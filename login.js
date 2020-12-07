@@ -4,6 +4,8 @@ var express = require("express");
 var session = require("express-session");
 var bodyParser = require("body-parser");
 var path = require("path");
+var PORT = process.env.PORT || 8380;
+var nodemon = require("nodemon");
 
 // 2.connect to our database
 var connection = mysql.createConnection({
@@ -189,7 +191,7 @@ app.get("/delete/:id", (req, res) => {
 });
 
 // 8.listen on a port, for testing purposes we'll use port 3000:
-app.listen(9000);
-console.log("running on port 9000...");
+app.listen(PORT);
+console.log("running on port " + PORT);
 
 // credit by:https://codeshack.io/basic-login-system-nodejs-express-mysql/
