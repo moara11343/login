@@ -43,6 +43,9 @@ app.use(bodyParser.json());
 app.get("/login", function(request, response) {
   response.sendFile(path.join(__dirname + "/login.html"));
 });
+app.get("/", function(request, response) {
+  response.sendFile(path.join(__dirname + "/login.html"));
+});
 
 
 //  6. handle the POST request,
